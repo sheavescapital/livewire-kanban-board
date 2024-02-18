@@ -1,24 +1,25 @@
 {
-    "name": "asantibanez/livewire-status-board",
-    "description": "Livewire component to show models/data according to its current status",
+    "name": "mantix/livewire-kanban-board",
+    "description": "Livewire component to show models/data according to its current status on a Kanban board",
     "keywords": [
-        "asantibanez",
-        "livewire-status-board"
+        "mantix",
+        "livewire-kanban-board"
     ],
-    "homepage": "https://github.com/asantibanez/livewire-status-board",
+    "homepage": "https://github.com/mantix/livewire-kanban-board",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Andrés Santibáñez",
-            "email": "santibanez.andres@gmail.com",
+            "name": "Pieter Naber",
+            "email": "Pieter@Mantix.nl",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.2|^8.0",
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
-        "livewire/livewire": "^1.0|^2.0"
+        "php": "^8.1",
+        "illuminate/support": "^10.0",
+        "laravel/framework": "^10.0",
+        "livewire/livewire": "^3.0"
     },
     "require-dev": {
         "orchestra/testbench": "^5.0|^6.0",
@@ -26,18 +27,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Asantibanez\\LivewireStatusBoard\\": "src"
+            "Mantix\\LivewireStatusBoard\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Asantibanez\\LivewireStatusBoard\\Tests\\": "tests"
+            "Mantix\\LivewireStatusBoard\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Asantibanez\\LivewireStatusBoard\\LivewireStatusBoardServiceProvider"
+                "Mantix\\LivewireStatusBoard\\LivewireStatusBoardServiceProvider"
             ],
             "aliases": {
-                "LivewireStatusBoard": "Asantibanez\\LivewireStatusBoard\\LivewireStatusBoardFacade"
+                "LivewireStatusBoard": "Mantix\\LivewireStatusBoard\\LivewireStatusBoardFacade"
             }
         }
     }

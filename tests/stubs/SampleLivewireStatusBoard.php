@@ -1,22 +1,20 @@
 <?php
 
-namespace Asantibanez\LivewireStatusBoard\Tests\Stubs;
+namespace Mantix\LivewireStatusBoard\Tests\Stubs;
 
-use Asantibanez\LivewireStatusBoard\LivewireStatusBoard;
+use Mantix\LivewireStatusBoard\LivewireStatusBoard;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Collection;
 use Ramsey\Uuid\Uuid;
 
-class SampleLivewireStatusBoard extends LivewireStatusBoard
-{
+class SampleLivewireStatusBoard extends LivewireStatusBoard {
     use WithFaker;
 
     public $recordClicked = false;
     public $statusSortedCalled = false;
     public $statusChangedCalled = false;
 
-    public function statuses(): Collection
-    {
+    public function statuses(): Collection {
         return collect([
             [
                 'id' => 'todo',
@@ -29,8 +27,7 @@ class SampleLivewireStatusBoard extends LivewireStatusBoard
         ]);
     }
 
-    public function records(): Collection
-    {
+    public function records(): Collection {
         $this->setUpFaker();
 
         return collect([
@@ -55,18 +52,15 @@ class SampleLivewireStatusBoard extends LivewireStatusBoard
         ]);
     }
 
-    public function onRecordClick($recordId)
-    {
+    public function onRecordClick($recordId) {
         $this->recordClicked = true;
     }
 
-    public function onStatusSorted($recordId, $statusId, $orderedIds)
-    {
+    public function onStatusSorted($recordId, $statusId, $orderedIds) {
         $this->statusSortedCalled = true;
     }
 
-    public function onStatusChanged($recordId, $statusId, $fromOrderedIds, $toOrderedIds)
-    {
+    public function onStatusChanged($recordId, $statusId, $fromOrderedIds, $toOrderedIds) {
         $this->statusChangedCalled = true;
     }
 }

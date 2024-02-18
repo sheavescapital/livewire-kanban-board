@@ -1,21 +1,18 @@
 <?php
 
-namespace Asantibanez\LivewireStatusBoard\Tests;
+namespace Mantix\LivewireStatusBoard\Tests;
 
-use Asantibanez\LivewireStatusBoard\LivewireStatusBoard;
+use Mantix\LivewireStatusBoard\LivewireStatusBoard;
 use Livewire\LivewireManager;
 use Livewire\Testing\TestableLivewire;
 
-class LivewireStatusBoardTest extends TestCase
-{
-    private function createComponent($parameters) : TestableLivewire
-    {
+class LivewireStatusBoardTest extends TestCase {
+    private function createComponent($parameters): TestableLivewire {
         return app(LivewireManager::class)->test(LivewireStatusBoard::class, $parameters);
     }
 
     /** @test */
-    public function can_build_component()
-    {
+    public function can_build_component() {
         //Arrange
 
         //Act

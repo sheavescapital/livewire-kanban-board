@@ -16,7 +16,7 @@
     </div>
 
     <div wire:ignore>
-        @includeWhen($sortable, 'livewire-status-board::sortable', [
+        @includeWhen($sortable, 'livewire-kanban-board::sortable', [
             'sortable' => $sortable,
             'sortableBetweenStatuses' => $sortableBetweenStatuses,
         ])

@@ -1,8 +1,11 @@
 # Changelog
 
-## 2.1.0 - 2020-01-25
+## 3.0.0 - 2024-02-18
 
 - Added support for PHP 8
+- Added Laravel 10 support
+- Added Livewire 3 support
+- Added Bootstrap styling support
 
 ## 2.0.0 - 2020-10-14
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.814978">
+    <testsuite name="Test Suite" tests="5" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.814978">
+      <testsuite name="Mantix\LivewireStatusBoard\Tests\LivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\LivewireStatusBoardTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.437668">
+        <testcase name="can_build_component" class="Mantix\LivewireStatusBoard\Tests\LivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.LivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\LivewireStatusBoardTest.php" line="15" assertions="1" time="0.437668"/>
+      </testsuite>
+      <testsuite name="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" tests="4" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.377310">
+        <testcase name="can_build_component" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="15" assertions="5" time="0.276440"/>
+        <testcase name="should_call_record_click" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="38" assertions="2" time="0.037921"/>
+        <testcase name="should_trigger_onStatusSorted" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="54" assertions="2" time="0.032361"/>
+        <testcase name="should_trigger_onStatusChanged" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="68" assertions="2" time="0.030587"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

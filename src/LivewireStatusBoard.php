@@ -1,13 +1,13 @@
 <?php
 
-namespace Asantibanez\LivewireStatusBoard;
+namespace Mantix\LivewireStatusBoard;
 
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
 /**
  * Class LivewireStatusBoard
- * @package Asantibanez\LivewireStatusBoard
+ * @package Mantix\LivewireStatusBoard
  * @property boolean $sortable
  * @property boolean $sortableBetweenStatuses
  * @property string $statusBoardView
@@ -22,8 +22,7 @@ use Livewire\Component;
  * @property string $ghostClass
  * @property boolean $recordClickEnabled
  */
-class LivewireStatusBoard extends Component
-{
+class LivewireStatusBoard extends Component {
     public $sortable;
     public $sortableBetweenStatuses;
 
@@ -41,31 +40,32 @@ class LivewireStatusBoard extends Component
 
     public $recordClickEnabled;
 
-    public function mount($sortable = false,
-                          $sortableBetweenStatuses = false,
-                          $statusBoardView = null,
-                          $statusView = null,
-                          $statusHeaderView = null,
-                          $statusFooterView = null,
-                          $recordView = null,
-                          $recordContentView = null,
-                          $sortableView = null,
-                          $beforeStatusBoardView = null,
-                          $afterStatusBoardView = null,
-                          $ghostClass = null,
-                          $recordClickEnabled = false,
-                          $extras = [])
-    {
+    public function mount(
+        $sortable = false,
+        $sortableBetweenStatuses = false,
+        $statusBoardView = null,
+        $statusView = null,
+        $statusHeaderView = null,
+        $statusFooterView = null,
+        $recordView = null,
+        $recordContentView = null,
+        $sortableView = null,
+        $beforeStatusBoardView = null,
+        $afterStatusBoardView = null,
+        $ghostClass = null,
+        $recordClickEnabled = false,
+        $extras = []
+    ) {
         $this->sortable = $sortable ?? false;
         $this->sortableBetweenStatuses = $sortableBetweenStatuses ?? false;
 
-        $this->statusBoardView = $statusBoardView ?? 'livewire-status-board::status-board';
-        $this->statusView = $statusView ?? 'livewire-status-board::status';
-        $this->statusHeaderView = $statusHeaderView ?? 'livewire-status-board::status-header';
-        $this->statusFooterView = $statusFooterView ?? 'livewire-status-board::status-footer';
-        $this->recordView = $recordView ?? 'livewire-status-board::record';
-        $this->recordContentView = $recordContentView ?? 'livewire-status-board::record-content';
-        $this->sortableView = $sortableView ?? 'livewire-status-board::sortable';
+        $this->statusBoardView = $statusBoardView ?? 'livewire-kanban-board::status-board';
+        $this->statusView = $statusView ?? 'livewire-kanban-board::status';
+        $this->statusHeaderView = $statusHeaderView ?? 'livewire-kanban-board::status-header';
+        $this->statusFooterView = $statusFooterView ?? 'livewire-kanban-board::status-footer';
+        $this->recordView = $recordView ?? 'livewire-kanban-board::record';
+        $this->recordContentView = $recordContentView ?? 'livewire-kanban-board::record-content';
+        $this->sortableView = $sortableView ?? 'livewire-kanban-board::sortable';
         $this->beforeStatusBoardView = $beforeStatusBoardView ?? null;
         $this->afterStatusBoardView = $afterStatusBoardView ?? null;
 
@@ -76,43 +76,35 @@ class LivewireStatusBoard extends Component
         $this->afterMount($extras);
     }
 
-    public function afterMount($extras = [])
-    {
+    public function afterMount($extras = []) {
         //
     }
 
-    public function statuses() : Collection
-    {
+    public function statuses(): Collection {
         return collect();
     }
 
-    public function records() : Collection
-    {
+    public function records(): Collection {
         return collect();
     }
 
-    public function isRecordInStatus($record, $status)
-    {
+    public function isRecordInStatus($record, $status) {
         return $record['status'] == $status['id'];
     }
 
-    public function onStatusSorted($recordId, $statusId, $orderedIds)
-    {
+    public function onStatusSorted($recordId, $statusId, $orderedIds) {
         //
     }
 
-    public function onStatusChanged($recordId, $statusId, $fromOrderedIds, $toOrderedIds)
-    {
+    public function onStatusChanged($recordId, $statusId, $fromOrderedIds, $toOrderedIds) {
         //
     }
 
-    public function onRecordClick($recordId)
-    {
+    public function onRecordClick($recordId) {
         //
     }
 
-    public function styles()
-    {
+    public function styles() {
         return [
             'wrapper' => 'w-full h-full flex space-x-4 overflow-x-auto',
             'statusWrapper' => 'h-full flex-1',
@@ -125,8 +117,7 @@ class LivewireStatusBoard extends Component
         ];
     }
 
-    public function render()
-    {
+    public function render() {
         $statuses = $this->statuses();
 
         $records = $this->records();

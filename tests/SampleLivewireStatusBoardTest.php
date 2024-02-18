@@ -1,21 +1,18 @@
 <?php
 
-namespace Asantibanez\LivewireStatusBoard\Tests;
+namespace Mantix\LivewireStatusBoard\Tests;
 
-use Asantibanez\LivewireStatusBoard\Tests\Stubs\SampleLivewireStatusBoard;
+use Mantix\LivewireStatusBoard\Tests\Stubs\SampleLivewireStatusBoard;
 use Livewire\LivewireManager;
 use Livewire\Testing\TestableLivewire;
 
-class SampleLivewireStatusBoardTest extends TestCase
-{
-    private function createComponent($parameters = []) : TestableLivewire
-    {
+class SampleLivewireStatusBoardTest extends TestCase {
+    private function createComponent($parameters = []): TestableLivewire {
         return app(LivewireManager::class)->test(SampleLivewireStatusBoard::class, $parameters);
     }
 
     /** @test */
-    public function can_build_component()
-    {
+    public function can_build_component() {
         //Arrange
 
         //Act
@@ -38,8 +35,7 @@ class SampleLivewireStatusBoardTest extends TestCase
     }
 
     /** @test */
-    public function should_call_record_click()
-    {
+    public function should_call_record_click() {
         //Arrange
         $component = $this->createComponent([
             'recordClickEnabled' => true,
@@ -55,8 +51,7 @@ class SampleLivewireStatusBoardTest extends TestCase
     }
 
     /** @test */
-    public function should_trigger_onStatusSorted()
-    {
+    public function should_trigger_onStatusSorted() {
         //Arrange
         $component = $this->createComponent();
 
@@ -70,8 +65,7 @@ class SampleLivewireStatusBoardTest extends TestCase
     }
 
     /** @test */
-    public function should_trigger_onStatusChanged()
-    {
+    public function should_trigger_onStatusChanged() {
         //Arrange
         $component = $this->createComponent();
 
