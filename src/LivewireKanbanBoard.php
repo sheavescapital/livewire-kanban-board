@@ -1,13 +1,13 @@
 <?php
 
-namespace Mantix\LivewireStatusBoard;
+namespace Mantix\LivewireKanbanBoard;
 
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
 /**
- * Class LivewireStatusBoard
- * @package Mantix\LivewireStatusBoard
+ * Class LivewireKanbanBoard
+ * @package Mantix\LivewireKanbanBoard
  * @property boolean $sortable
  * @property boolean $sortableBetweenStatuses
  * @property string $statusBoardView
@@ -22,7 +22,7 @@ use Livewire\Component;
  * @property string $ghostClass
  * @property boolean $recordClickEnabled
  */
-class LivewireStatusBoard extends Component {
+class LivewireKanbanBoard extends Component {
     public $sortable;
     public $sortableBetweenStatuses;
 
@@ -59,7 +59,7 @@ class LivewireStatusBoard extends Component {
         $this->sortable = $sortable ?? false;
         $this->sortableBetweenStatuses = $sortableBetweenStatuses ?? false;
 
-        $this->statusBoardView = $statusBoardView ?? 'livewire-kanban-board::status-board';
+        $this->statusBoardView = $statusBoardView ?? 'livewire-kanban-board::kanban-board';
         $this->statusView = $statusView ?? 'livewire-kanban-board::status';
         $this->statusHeaderView = $statusHeaderView ?? 'livewire-kanban-board::status-header';
         $this->statusFooterView = $statusFooterView ?? 'livewire-kanban-board::status-footer';

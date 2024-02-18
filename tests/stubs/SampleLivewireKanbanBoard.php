@@ -1,13 +1,13 @@
 <?php
 
-namespace Mantix\LivewireStatusBoard\Tests\Stubs;
+namespace Mantix\LivewireKanbanBoard\Tests\Stubs;
 
-use Mantix\LivewireStatusBoard\LivewireStatusBoard;
+use Mantix\LivewireKanbanBoard\LivewireKanbanBoard;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Collection;
 use Ramsey\Uuid\Uuid;
 
-class SampleLivewireStatusBoard extends LivewireStatusBoard {
+class SampleLivewireKanbanBoard extends LivewireKanbanBoard {
     use WithFaker;
 
     public $recordClicked = false;

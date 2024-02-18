@@ -1,8 +1,8 @@
 <?php
 
-namespace Mantix\LivewireStatusBoard\Tests;
+namespace Mantix\LivewireKanbanBoard\Tests;
 
-use Mantix\LivewireStatusBoard\LivewireStatusBoardServiceProvider;
+use Mantix\LivewireKanbanBoard\LivewireKanbanBoardServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as BaseCase;
 
@@ -10,7 +10,7 @@ class TestCase extends BaseCase {
     protected function getPackageProviders($app) {
         return [
             LivewireServiceProvider::class,
-            LivewireStatusBoardServiceProvider::class,
+            LivewireKanbanBoardServiceProvider::class,
         ];
     }
 

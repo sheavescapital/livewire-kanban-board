@@ -1,15 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="5" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.814978">
-    <testsuite name="Test Suite" tests="5" assertions="12" errors="0" warnings="0" failures="0" skipped="0" time="0.814978">
-      <testsuite name="Mantix\LivewireStatusBoard\Tests\LivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\LivewireStatusBoardTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.437668">
-        <testcase name="can_build_component" class="Mantix\LivewireStatusBoard\Tests\LivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.LivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\LivewireStatusBoardTest.php" line="15" assertions="1" time="0.437668"/>
+  <testsuite name="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\phpunit.xml.dist" tests="5" assertions="1" errors="4" failures="0" skipped="0" time="0.444914">
+    <testsuite name="Test Suite" tests="5" assertions="1" errors="4" failures="0" skipped="0" time="0.444914">
+      <testsuite name="Mantix\LivewireKanbanBoard\Tests\LivewireKanbanBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\LivewireKanbanBoardTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.359537">
+        <testcase name="can_build_component" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\LivewireKanbanBoardTest.php" line="15" class="Mantix\LivewireKanbanBoard\Tests\LivewireKanbanBoardTest" classname="Mantix.LivewireKanbanBoard.Tests.LivewireKanbanBoardTest" assertions="1" time="0.359537"/>
       </testsuite>
-      <testsuite name="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" tests="4" assertions="11" errors="0" warnings="0" failures="0" skipped="0" time="0.377310">
-        <testcase name="can_build_component" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="15" assertions="5" time="0.276440"/>
-        <testcase name="should_call_record_click" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="38" assertions="2" time="0.037921"/>
-        <testcase name="should_trigger_onStatusSorted" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="54" assertions="2" time="0.032361"/>
-        <testcase name="should_trigger_onStatusChanged" class="Mantix\LivewireStatusBoard\Tests\SampleLivewireStatusBoardTest" classname="Mantix.LivewireStatusBoard.Tests.SampleLivewireStatusBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireStatusBoardTest.php" line="68" assertions="2" time="0.030587"/>
+      <testsuite name="Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php" tests="4" assertions="0" errors="4" failures="0" skipped="0" time="0.085377">
+        <testcase name="can_build_component" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php" line="15" class="Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest" classname="Mantix.LivewireKanbanBoard.Tests.SampleLivewireKanbanBoardTest" assertions="0" time="0.046019">
+          <error type="Livewire\Exceptions\PropertyNotFoundException">Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest::can_build_component&#13;
+Livewire\Exceptions\PropertyNotFoundException: Property [$id] not found on component: [4266128130]
+&#13;
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Component.php:105
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:129
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Arr.php:588
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Collection.php:777
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:128
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Wrapped.php:23
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:269
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:229
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:52
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\orchestra\testbench-core\laravel\storage\framework\views\75c1b4974497b1e03e7915b22e08fdf0.php:7
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:124
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:125
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php:58
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:22
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:10
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:207
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:190
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:159
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Compilers\BladeCompiler.php:335
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:25
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php:40
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:237
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:208
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:806
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:805
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:784
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:748
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:737
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:200
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:175
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php:585
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:33
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\RequestBroker.php:30
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:32
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Render.php:24
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:31
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:17
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Testable.php:34
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:184
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:11
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:19</error>
+        </testcase>
+        <testcase name="should_call_record_click" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php" line="38" class="Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest" classname="Mantix.LivewireKanbanBoard.Tests.SampleLivewireKanbanBoardTest" assertions="0" time="0.011993">
+          <error type="Livewire\Exceptions\PropertyNotFoundException">Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest::should_call_record_click&#13;
+Livewire\Exceptions\PropertyNotFoundException: Property [$id] not found on component: [4266128130]
+&#13;
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Component.php:105
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:129
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Arr.php:588
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Collection.php:777
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:128
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Wrapped.php:23
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:269
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:229
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:52
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\orchestra\testbench-core\laravel\storage\framework\views\75c1b4974497b1e03e7915b22e08fdf0.php:7
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:124
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:125
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php:58
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:22
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:10
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:207
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:190
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:159
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Compilers\BladeCompiler.php:335
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:25
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php:40
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:237
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:208
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:806
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:805
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:784
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:748
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:737
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:200
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:175
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php:585
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:33
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\RequestBroker.php:30
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:32
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Render.php:24
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:31
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:17
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Testable.php:34
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:184
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:11
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:40</error>
+        </testcase>
+        <testcase name="should_trigger_onStatusSorted" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php" line="54" class="Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest" classname="Mantix.LivewireKanbanBoard.Tests.SampleLivewireKanbanBoardTest" assertions="0" time="0.012026">
+          <error type="Livewire\Exceptions\PropertyNotFoundException">Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest::should_trigger_onStatusSorted&#13;
+Livewire\Exceptions\PropertyNotFoundException: Property [$id] not found on component: [4266128130]
+&#13;
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Component.php:105
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:129
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Arr.php:588
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Collection.php:777
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:128
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Wrapped.php:23
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:269
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:229
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:52
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\orchestra\testbench-core\laravel\storage\framework\views\75c1b4974497b1e03e7915b22e08fdf0.php:7
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:124
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:125
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php:58
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:22
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:10
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:207
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:190
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:159
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Compilers\BladeCompiler.php:335
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:25
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php:40
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:237
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:208
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:806
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:805
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:784
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:748
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:737
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:200
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:175
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php:585
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:33
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\RequestBroker.php:30
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:32
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Render.php:24
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:31
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:17
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Testable.php:34
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:184
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:11
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:56</error>
+        </testcase>
+        <testcase name="should_trigger_onStatusChanged" file="C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php" line="68" class="Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest" classname="Mantix.LivewireKanbanBoard.Tests.SampleLivewireKanbanBoardTest" assertions="0" time="0.015339">
+          <error type="Livewire\Exceptions\PropertyNotFoundException">Mantix\LivewireKanbanBoard\Tests\SampleLivewireKanbanBoardTest::should_trigger_onStatusChanged&#13;
+Livewire\Exceptions\PropertyNotFoundException: Property [$id] not found on component: [4266128130]
+&#13;
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Component.php:105
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:129
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Arr.php:588
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Collections\Collection.php:777
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\src\LivewireKanbanBoard.php:128
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:93
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:35
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Wrapped.php:23
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:269
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:229
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\HandleComponents\HandleComponents.php:52
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\orchestra\testbench-core\laravel\storage\framework\views\75c1b4974497b1e03e7915b22e08fdf0.php:7
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:124
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:125
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php:58
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:22
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Engines\CompilerEngine.php:72
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Mechanisms\ExtendBlade\ExtendedCompilerEngine.php:10
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:207
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:190
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\View.php:159
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\View\Compilers\BladeCompiler.php:335
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:25
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\CallableDispatcher.php:40
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:237
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Route.php:208
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:806
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:805
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:784
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:748
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Routing\Router.php:737
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:200
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php:119
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:175
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php:144
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Foundation\Testing\Concerns\MakesHttpRequests.php:585
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:33
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\RequestBroker.php:30
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:32
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Render.php:24
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:31
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\InitialRender.php:17
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\Features\SupportTesting\Testable.php:34
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\livewire\livewire\src\LivewireManager.php:184
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:355
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:11
+C:\Users\ptgna\OneDrive\Mantix\Websites\livewire-kanban-board\tests\SampleLivewireKanbanBoardTest.php:70</error>
+        </testcase>
       </testsuite>
     </testsuite>
   </testsuite>

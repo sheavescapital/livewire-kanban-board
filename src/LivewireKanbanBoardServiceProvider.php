@@ -1,10 +1,10 @@
 <?php
 
-namespace Mantix\LivewireStatusBoard;
+namespace Mantix\LivewireKanbanBoard;
 
 use Illuminate\Support\ServiceProvider;
 
-class LivewireStatusBoardServiceProvider extends ServiceProvider {
+class LivewireKanbanBoardServiceProvider extends ServiceProvider {
     /**
      * Bootstrap the application services.
      */

@@ -22,17 +22,17 @@
         "livewire/livewire": "^3.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^5.0|^6.0",
-        "phpunit/phpunit": "^8.0|^9.0"
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0"
     },
     "autoload": {
         "psr-4": {
-            "Mantix\\LivewireStatusBoard\\": "src"
+            "Mantix\\LivewireKanbanBoard\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mantix\\LivewireStatusBoard\\Tests\\": "tests"
+            "Mantix\\LivewireKanbanBoard\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mantix\\LivewireStatusBoard\\LivewireStatusBoardServiceProvider"
+                "Mantix\\LivewireKanbanBoard\\LivewireKanbanBoardServiceProvider"
             ],
             "aliases": {
-                "LivewireStatusBoard": "Mantix\\LivewireStatusBoard\\LivewireStatusBoardFacade"
+                "LivewireKanbanBoard": "Mantix\\LivewireKanbanBoard\\LivewireKanbanBoardFacade"
             }
         }
     }

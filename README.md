@@ -118,7 +118,7 @@ $status['id'] == $record['status'];
 To render the component in a view, just use the Livewire tag or include syntax
 
 ```blade
-<livewire:sales-orders-status-board />
+<livewire:sales-orders-kanban-board />
 ```  
 
 Populate the Sales Order model and you should have something similar to the following screenshot
@@ -133,7 +133,7 @@ By default, sorting and dragging between statuses is disabled. To enable it, you
 props when using the view: `sortable` and `sortable-between-statuses` 
 
 ```blade
-<livewire:sales-orders-status-board 
+<livewire:sales-orders-kanban-board 
     :sortable="true"
     :sortable-between-statuses="true"
 />
@@ -197,7 +197,7 @@ To enable `onRecordClick` you must specify this behavior when rendering the comp
 `record-click-enabled` parameter
 
 ```blade
-<livewire:sales-orders-status-board 
+<livewire:sales-orders-kanban-board 
     :record-click-enabled="true"
 />
 ```
