@@ -1,16 +1,16 @@
 <script>
-    window.onload = () => {
-        @foreach($statuses as $status)
+    window.addEventListener('load', function() {
+        @foreach ($statuses as $status)
             Sortable.create(document.getElementById('{{ $status['statusRecordsId'] }}'), {
                 group: '{{ $sortableBetweenStatuses ? $status['group'] : $status['id'] }}',
                 animation: 0,
                 ghostClass: '{{ $ghostClass }}',
 
-                setData: function (dataTransfer, dragEl) {
+                setData: function(dataTransfer, dragEl) {
                     dataTransfer.setData('id', dragEl.id);
                 },
 
-                onEnd: function (evt) {
+                onEnd: function(evt) {
                     const sameContainer = evt.from === evt.to;
                     const orderChanged = evt.oldIndex !== evt.newIndex;
 
@@ -35,5 +35,5 @@
                 },
             });
         @endforeach
-    }
+    });
 </script>
