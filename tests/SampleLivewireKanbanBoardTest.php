@@ -13,68 +13,105 @@ class SampleLivewireKanbanBoardTest extends TestCase {
 
     /** @test */
     public function can_build_component() {
-        //Arrange
+        // Arrange
 
-        //Act
+        // Act
         $component = $this->createComponent();
 
-        //Assert
-        $this->assertNotNull($component);
+        // Assert
+        $component->assertStatus(200);
 
-        //$this->assertTrue($component->statuses()->pluck('id')->contains('todo'));
-        /*$this->assertCount(
-            1,
-            $component->statuses()->where('id', 'todo')->first()['records']
-        );*/
+        // Check statuses
+        $component->assertViewHas(
+            'statuses',
+            function ($statuses) {
+                return count($statuses) == 3;
+            }
+        );
 
-        //$this->assertTrue($component->statuses()->pluck('id')->contains('completed'));
-        /*$this->assertCount(
-            2,
-            $component->entangled('statuses')->where('id', 'completed')->first()['records']
-        );*/
+        // Check records
+        $component->assertViewHas(
+            'records',
+            function ($records) {
+                return count($records) == 3;
+            }
+        );
     }
 
     /** @test */
     public function should_call_record_click() {
-        //Arrange
+        // Arrange
         $component = $this->createComponent([
             'recordClickEnabled' => true,
         ]);
 
-        $this->assertFalse($component->entangled('recordClicked'));
+        // Assert
+        $component->assertViewHas(
+            'recordClicked',
+            function ($recordClicked) {
+                return $recordClicked === false;
+            }
+        );
 
-        //Act
-        $component->runAction('onRecordClick', $component->entangled('statuses')->get(0)['records'][0]['id']);
+        // Act
+        $component->call('onRecordClick', 'test');
 
-        //Assert
-        $this->assertTrue($component->entangled('recordClicked'));
+        // Assert
+        $component->assertViewHas(
+            'recordClicked',
+            function ($recordClicked) {
+                return $recordClicked === true;
+            }
+        );
     }
 
     /** @test */
     public function should_trigger_onStatusSorted() {
-        //Arrange
+        // Arrange
         $component = $this->createComponent();
 
-        $this->assertFalse($component->entangled('statusSortedCalled'));
+        // Assert
+        $component->assertViewHas(
+            'statusSortedCalled',
+            function ($statusSortedCalled) {
+                return $statusSortedCalled === false;
+            }
+        );
 
-        //Act
-        $component->runAction('onStatusSorted', null, null, null);
+        // Act
+        $component->call('onStatusSorted', null, null, null);
 
-        //Assert
-        $this->assertTrue($component->entangled('statusSortedCalled'));
+        // Assert
+        $component->assertViewHas(
+            'statusSortedCalled',
+            function ($statusSortedCalled) {
+                return $statusSortedCalled === true;
+            }
+        );
     }
 
     /** @test */
     public function should_trigger_onStatusChanged() {
-        //Arrange
+        // Arrange
         $component = $this->createComponent();
 
-        $this->assertFalse($component->entangled('statusChangedCalled'));
+        // Assert
+        $component->assertViewHas(
+            'statusChangedCalled',
+            function ($statusChangedCalled) {
+                return $statusChangedCalled === false;
+            }
+        );
 
-        //Act
-        $component->runAction('onStatusChanged', null, null, null, null);
+        // Act
+        $component->call('onStatusChanged', null, null, null, null);
 
-        //Assert
-        $this->assertTrue($component->entangled('statusChangedCalled'));
+        // Assert
+        $component->assertViewHas(
+            'statusChangedCalled',
+            function ($statusChangedCalled) {
+                return $statusChangedCalled === true;
+            }
+        );
     }
 }

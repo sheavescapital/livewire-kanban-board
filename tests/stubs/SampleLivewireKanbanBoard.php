@@ -3,13 +3,9 @@
 namespace Mantix\LivewireKanbanBoard\Tests\Stubs;
 
 use Mantix\LivewireKanbanBoard\LivewireKanbanBoard;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Collection;
-use Ramsey\Uuid\Uuid;
 
 class SampleLivewireKanbanBoard extends LivewireKanbanBoard {
-    use WithFaker;
-
     public $recordClicked = false;
     public $statusSortedCalled = false;
     public $statusChangedCalled = false;
@@ -21,32 +17,34 @@ class SampleLivewireKanbanBoard extends LivewireKanbanBoard {
                 'title' => 'To Do',
             ],
             [
-                'id' => 'completed',
-                'title' => 'Completed',
+                'id' => 'doing',
+                'title' => 'Doing',
+            ],
+            [
+                'id' => 'done',
+                'title' => 'Done',
             ],
         ]);
     }
 
     public function records(): Collection {
-        $this->setUpFaker();
-
         return collect([
             [
-                'id' => Uuid::uuid4()->toString(),
+                'id' => fake()->uuid(),
                 'status' => 'todo',
-                'title' => $this->faker->name,
+                'title' => fake()->name(),
                 'clicked' => false,
             ],
             [
-                'id' => Uuid::uuid4()->toString(),
+                'id' => fake()->uuid(),
                 'status' => 'completed',
-                'title' => $this->faker->name,
+                'title' => fake()->name(),
                 'clicked' => false,
             ],
             [
-                'id' => Uuid::uuid4()->toString(),
+                'id' => fake()->uuid(),
                 'status' => 'completed',
-                'title' => $this->faker->name,
+                'title' => fake()->name(),
                 'clicked' => false,
             ],
         ]);

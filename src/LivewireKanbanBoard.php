@@ -126,8 +126,9 @@ class LivewireKanbanBoard extends Component {
 
         $statuses = $statuses
             ->map(function ($status) use ($records) {
-                $status['group'] = $this->id;
-                $status['statusRecordsId'] = "{$this->id}-{$status['id']}";
+                $id = $this->id ?? 0;
+                $status['group'] = $id;
+                $status['statusRecordsId'] = "{$id}-{$status['id']}";
                 $status['records'] = $records
                     ->filter(function ($record) use ($status) {
                         return $this->isRecordInStatus($record, $status);
