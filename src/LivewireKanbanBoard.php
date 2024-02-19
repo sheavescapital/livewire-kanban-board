@@ -69,7 +69,7 @@ class LivewireKanbanBoard extends Component {
         $this->beforeStatusBoardView = $beforeStatusBoardView ?? null;
         $this->afterStatusBoardView = $afterStatusBoardView ?? null;
 
-        $this->ghostClass = $ghostClass ?? 'bg-info';
+        $this->ghostClass = $ghostClass ?? 'bg-primary-subtle';
 
         $this->recordClickEnabled = $recordClickEnabled ?? false;
 
