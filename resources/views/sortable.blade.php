@@ -34,7 +34,6 @@
                     @this.call('onStatusChanged', recordId, toStatusId, fromOrderedIds, toOrderedIds);
                 },
             });
-            @endforeach
         });
     });
 </script>
