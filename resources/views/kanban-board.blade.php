@@ -4,9 +4,9 @@
     </div>
 
     <div class="{{ $styles['wrapper'] }}">
-        @foreach($statuses as $status)
+        @foreach ($statuses as $status)
             @include($statusView, [
-                'status' => $status
+                'status' => $status,
             ])
         @endforeach
     </div>

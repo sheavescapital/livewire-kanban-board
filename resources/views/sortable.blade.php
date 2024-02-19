@@ -1,8 +1,8 @@
 <script>
     window.addEventListener('load', function() {
-        @foreach ($statuses as $status)
-            Sortable.create(document.getElementById('{{ $status['statusRecordsId'] }}'), {
-                group: '{{ $sortableBetweenStatuses ? $status['group'] : $status['id'] }}',
+        document.querySelectorAll('.status-container').forEach(statusContainer => {
+            Sortable.create(statusContainer, {
+                group: statusContainer.dataset.{{ $sortableBetweenStatuses ? 'statusGroup' : 'statusId' }},
                 animation: 0,
                 ghostClass: '{{ $ghostClass }}',
 
@@ -34,6 +34,7 @@
                     @this.call('onStatusChanged', recordId, toStatusId, fromOrderedIds, toOrderedIds);
                 },
             });
-        @endforeach
+            @endforeach
+        });
     });
 </script>

@@ -1,18 +1,17 @@
-
 {{-- Injected variables $status, $styles --}}
-<div class="{{ $styles['statusWrapper'] }}">
+<div class="{{ $styles['statusWrapper'] }}" style="width: {{ $styles['statusWidth'] }}px;">
     <div class="{{ $styles['status'] }}" id="{{ $status['id'] }}">
 
         @include($statusHeaderView, [
-            'status' => $status
+            'status' => $status,
         ])
 
-        <div
-            id="{{ $status['statusRecordsId'] }}"
-            data-status-id="{{ $status['id'] }}"
-            class="{{ $styles['statusRecords'] }}">
+        <div id="{{ $status['statusRecordsId'] }}"
+             data-status-group="{{ $status['group'] }}"
+             data-status-id="{{ $status['id'] }}"
+             class="status-container {{ $styles['statusRecords'] }}">
 
-            @foreach($status['records'] as $record)
+            @foreach ($status['records'] as $record)
                 @include($recordView, [
                     'record' => $record,
                 ])
@@ -21,7 +20,7 @@
         </div>
 
         @include($statusFooterView, [
-            'status' => $status
+            'status' => $status,
         ])
 
     </div>

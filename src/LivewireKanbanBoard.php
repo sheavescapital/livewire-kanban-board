@@ -69,7 +69,7 @@ class LivewireKanbanBoard extends Component {
         $this->beforeStatusBoardView = $beforeStatusBoardView ?? null;
         $this->afterStatusBoardView = $afterStatusBoardView ?? null;
 
-        $this->ghostClass = $ghostClass ?? 'bg-indigo-100';
+        $this->ghostClass = $ghostClass ?? 'bg-info';
 
         $this->recordClickEnabled = $recordClickEnabled ?? false;
 
@@ -106,14 +106,15 @@ class LivewireKanbanBoard extends Component {
 
     public function styles() {
         return [
-            'wrapper' => 'w-full h-full flex space-x-4 overflow-x-auto',
-            'statusWrapper' => 'h-full flex-1',
-            'status' => 'bg-blue-200 rounded px-2 flex flex-col h-full',
-            'statusHeader' => 'p-2 text-sm text-gray-700',
-            'statusFooter' => '',
-            'statusRecords' => 'space-y-2 p-2 flex-1 overflow-y-auto',
-            'record' => 'shadow bg-white p-2 rounded border',
-            'recordContent' => 'w-full',
+            'wrapper' => 'd-flex flex-nowrap overflow-x-auto rounded', // component wrapper
+            'statusWrapper' => 'flex-shrink-0', // statuses wrapper
+            'statusWidth' => 272, // statuses column width
+            'status' => 'flex-column rounded bg-primary fw-bold mx-1 px-2', // status column wrapper 
+            'statusHeader' => 'py-2 fs-5', // status header
+            'statusFooter' => '', // status footer
+            'statusRecords' => '', // status records wrapper 
+            'record' => 'bg-white shadow rounded border fw-normal p-2 my-2', // record wrapper
+            'recordContent' => '', // record content
         ];
     }
 

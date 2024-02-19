@@ -210,15 +210,16 @@ These base keys and styles are:
 
 ```php
 return [
-    'wrapper' => 'w-full h-full flex space-x-4 overflow-x-auto', // component wrapper
-    'statusWrapper' => 'h-full flex-1', // statuses wrapper
-    'status' => 'bg-blue-200 rounded px-2 flex flex-col h-full', // status column wrapper 
-    'statusHeader' => 'p-2 text-sm text-gray-700', // status header
+    'wrapper' => 'd-flex flex-nowrap overflow-x-auto rounded', // component wrapper
+    'statusWrapper' => 'flex-shrink-0', // statuses wrapper
+    'statusWidth' => 272, // statuses column width
+    'status' => 'flex-column rounded bg-primary fw-bold mx-1 px-2', // status column wrapper 
+    'statusHeader' => 'py-2 fs-5', // status header
     'statusFooter' => '', // status footer
-    'statusRecords' => 'space-y-2 p-2 flex-1 overflow-y-auto', // status records wrapper 
-    'record' => 'shadow bg-white p-2 rounded border', // record wrapper
+    'statusRecords' => '', // status records wrapper 
+    'record' => 'bg-white shadow rounded border fw-normal p-2 my-2', // record wrapper
     'recordContent' => '', // record content
-]; 
+];
 ```
 
 An example of overriding the `styles()` method can be seen below
@@ -228,17 +229,19 @@ public function styles()
 {
     $baseStyles = parent::styles();
 
-    $baseStyles['wrapper'] = 'w-full flex space-x-4 overflow-x-auto bg-blue-500 px-4 py-8';
+    $baseStyles['wrapper'] = 'd-flex flex-nowrap overflow-x-auto rounded';
 
-    $baseStyles['statusWrapper'] = 'flex-1';
+    $baseStyles['statusWrapper'] = 'flex-shrink-0';
 
-    $baseStyles['status'] = 'bg-gray-200 rounded px-2 flex flex-col flex-1';
+    $baseStyles['statusWidth'] = 300;
 
-    $baseStyles['statusHeader'] = 'text-sm font-medium py-2 text-gray-700';
+    $baseStyles['status'] = 'flex-column rounded bg-primary fw-bold mx-1 px-2';
 
-    $baseStyles['statusRecords'] = 'space-y-2 px-1 pt-2 pb-2';
+    $baseStyles['statusHeader'] = 'py-2 fs-5';
 
-    $baseStyles['record'] = 'shadow bg-white p-2 rounded border text-sm text-gray-800';
+    $baseStyles['statusRecords'] = 'overflow-y-auto';
+
+    $baseStyles['record'] = 'bg-white shadow rounded border fw-normal p-2 my-2';
 
     return $baseStyles;
 }
