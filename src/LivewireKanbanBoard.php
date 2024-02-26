@@ -10,15 +10,18 @@ use Livewire\Component;
  * @package Mantix\LivewireKanbanBoard
  * @property boolean $sortable
  * @property boolean $sortableBetweenStatuses
- * @property string $statusBoardView
+ * @property string $kanbanBoardView
+ * @property string $swimlaneView;
+ * @property string $swimlaneHeaderView;
+ * @property string $swimlaneFooterView;
  * @property string $statusView
  * @property string $statusHeaderView
  * @property string $statusFooterView
  * @property string $recordView
  * @property string $recordContentView
  * @property string $sortableView
- * @property string $beforeStatusBoardView
- * @property string $afterStatusBoardView
+ * @property string $beforeKanbanBoardView
+ * @property string $afterKanbanBoardView
  * @property string $ghostClass
  * @property boolean $recordClickEnabled
  */
@@ -26,15 +29,18 @@ class LivewireKanbanBoard extends Component {
     public $sortable;
     public $sortableBetweenStatuses;
 
-    public $statusBoardView;
+    public $kanbanBoardView;
+    public $swimlaneView;
+    public $swimlaneHeaderView;
+    public $swimlaneFooterView;
     public $statusView;
     public $statusHeaderView;
     public $statusFooterView;
     public $recordView;
     public $recordContentView;
     public $sortableView;
-    public $beforeStatusBoardView;
-    public $afterStatusBoardView;
+    public $beforeKanbanBoardView;
+    public $afterKanbanBoardView;
 
     public $ghostClass;
 
@@ -43,15 +49,18 @@ class LivewireKanbanBoard extends Component {
     public function mount(
         $sortable = false,
         $sortableBetweenStatuses = false,
-        $statusBoardView = null,
+        $kanbanBoardView = null,
+        $swimlaneView = null,
+        $swimlaneHeaderView = null,
+        $swimlaneFooterView = null,
         $statusView = null,
         $statusHeaderView = null,
         $statusFooterView = null,
         $recordView = null,
         $recordContentView = null,
         $sortableView = null,
-        $beforeStatusBoardView = null,
-        $afterStatusBoardView = null,
+        $beforeKanbanBoardView = null,
+        $afterKanbanBoardView = null,
         $ghostClass = null,
         $recordClickEnabled = false,
         $extras = []
@@ -59,15 +68,18 @@ class LivewireKanbanBoard extends Component {
         $this->sortable = $sortable ?? false;
         $this->sortableBetweenStatuses = $sortableBetweenStatuses ?? false;
 
-        $this->statusBoardView = $statusBoardView ?? 'livewire-kanban-board::kanban-board';
+        $this->kanbanBoardView = $kanbanBoardView ?? 'livewire-kanban-board::kanban-board';
+        $this->swimlaneView = $swimlaneView ?? 'livewire-kanban-board::swimlane';
+        $this->swimlaneHeaderView = $swimlaneHeaderView ?? 'livewire-kanban-board::swimlane-header';
+        $this->swimlaneFooterView = $swimlaneFooterView ?? 'livewire-kanban-board::swimlane-footer';
         $this->statusView = $statusView ?? 'livewire-kanban-board::status';
         $this->statusHeaderView = $statusHeaderView ?? 'livewire-kanban-board::status-header';
         $this->statusFooterView = $statusFooterView ?? 'livewire-kanban-board::status-footer';
         $this->recordView = $recordView ?? 'livewire-kanban-board::record';
         $this->recordContentView = $recordContentView ?? 'livewire-kanban-board::record-content';
         $this->sortableView = $sortableView ?? 'livewire-kanban-board::sortable';
-        $this->beforeStatusBoardView = $beforeStatusBoardView ?? null;
-        $this->afterStatusBoardView = $afterStatusBoardView ?? null;
+        $this->beforeKanbanBoardView = $beforeKanbanBoardView ?? null;
+        $this->afterKanbanBoardView = $afterKanbanBoardView ?? null;
 
         $this->ghostClass = $ghostClass ?? 'bg-primary-subtle';
 
@@ -84,12 +96,16 @@ class LivewireKanbanBoard extends Component {
         return collect();
     }
 
+    public function swimlanes(): Collection {
+        return collect();
+    }
+
     public function records(): Collection {
         return collect();
     }
 
-    public function isRecordInStatus($record, $status) {
-        return $record['status'] == $status['id'];
+    public function isRecordInStatusAndSwimlane($record, $status, $swimlane) {
+        return $record['status'] == $status['id'] && $record['swimlane'] == $swimlane['id'];
     }
 
     public function onStatusSorted($recordId, $statusId, $orderedIds) {
@@ -106,42 +122,49 @@ class LivewireKanbanBoard extends Component {
 
     public function styles() {
         return [
-            'wrapper' => 'd-flex flex-nowrap overflow-x-auto rounded', // component wrapper
+            'kanbanWrapper' => '', // component wrapper
+            'swimlaneWrapper' => '', // swimlanes wrapper
+            'swimlane' => '', // swimlane column wrapper 
+            'swimlaneHeader' => 'p-2 fs-4', // swimlane header
+            'swimlaneFooter' => '', // swimlane footer
+            'swimlaneRecords' => 'd-flex flex-nowrap overflow-x-auto rounded', // swimlane records wrapper 
             'statusWrapper' => 'flex-shrink-0', // statuses wrapper
             'statusWidth' => 272, // statuses column width
-            'status' => 'flex-column rounded bg-primary fw-bold mx-1 px-2', // status column wrapper 
+            'status' => 'flex-column rounded fw-bold mx-1 px-2', // status column wrapper 
             'statusHeader' => 'py-2 fs-5', // status header
             'statusFooter' => '', // status footer
             'statusRecords' => '', // status records wrapper 
-            'record' => 'bg-white shadow rounded border fw-normal p-2 my-2', // record wrapper
+            'record' => 'shadow-sm rounded border fw-normal p-2 my-2', // record wrapper
             'recordContent' => '', // record content
         ];
     }
 
     public function render() {
+        $swimlanes = $this->swimlanes();
         $statuses = $this->statuses();
-
         $records = $this->records();
-
         $styles = $this->styles();
 
-        $statuses = $statuses
-            ->map(function ($status) use ($records) {
-                $id = $this->id ?? 0;
+        $swimlanes = $swimlanes->map(function ($swimlane) use ($statuses, $records) {
+            $id = $this->id ?? 'kanban';
+            $swimlane['group'] = $id;
+            $swimlane['statuses'] = $statuses->map(function ($status) use ($id, $swimlane, $records) {
                 $status['group'] = $id;
-                $status['statusRecordsId'] = "{$id}-{$status['id']}";
-                $status['records'] = $records
-                    ->filter(function ($record) use ($status) {
-                        return $this->isRecordInStatus($record, $status);
-                    });
-
+                $status['swimlaneStatusID'] = $id . '-' . $swimlane['id'] . '-' . $status['id'];
+                $status['records'] = $records->filter(function ($record) use ($id, $swimlane, $status) {
+                    $record['swimlaneStatusRecordID'] = $id . '-' . $swimlane['id'] . '-' . $status['id'] . '-' . $record['id'];
+                    return $this->isRecordInStatusAndSwimlane($record, $status, $swimlane);
+                });
                 return $status;
             });
+            return $swimlane;
+        });
 
-        return view($this->statusBoardView)
+        return view($this->kanbanBoardView)
             ->with([
-                'records' => $records,
+                'swimlanes' => $swimlanes,
                 'statuses' => $statuses,
+                'records' => $records,
                 'styles' => $styles,
             ]);
     }

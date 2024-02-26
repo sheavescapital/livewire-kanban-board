@@ -6,7 +6,7 @@
             'status' => $status,
         ])
 
-        <div id="{{ $status['statusRecordsId'] }}"
+        <div id="{{ $status['swimlaneStatusID'] }}"
              data-status-group="{{ $status['group'] }}"
              data-status-id="{{ $status['id'] }}"
              class="status-container {{ $styles['statusRecords'] }}">

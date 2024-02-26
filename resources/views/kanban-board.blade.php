@@ -1,18 +1,18 @@
 <div>
     <div>
-        @includeIf($beforeStatusBoardView)
+        @includeIf($beforeKanbanBoardView)
     </div>
 
-    <div class="{{ $styles['wrapper'] }}">
-        @foreach ($statuses as $status)
-            @include($statusView, [
-                'status' => $status,
+    <div class="{{ $styles['kanbanWrapper'] }}">
+        @foreach ($swimlanes as $swimlane)
+            @include($swimlaneView, [
+                'swimlane' => $swimlane,
             ])
         @endforeach
     </div>
 
     <div>
-        @includeIf($afterStatusBoardView)
+        @includeIf($afterKanbanBoardView)
     </div>
 
     <div wire:ignore>
