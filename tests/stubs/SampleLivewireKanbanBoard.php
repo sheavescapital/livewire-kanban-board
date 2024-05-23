@@ -1,8 +1,8 @@
 <?php
 
-namespace Mantix\LivewireKanbanBoard\Tests\Stubs;
+namespace SheavesCapital\LivewireKanbanBoard\Tests\Stubs;
 
-use Mantix\LivewireKanbanBoard\LivewireKanbanBoard;
+use SheavesCapital\LivewireKanbanBoard\LivewireKanbanBoard;
 use Illuminate\Support\Collection;
 
 class SampleLivewireKanbanBoard extends LivewireKanbanBoard {

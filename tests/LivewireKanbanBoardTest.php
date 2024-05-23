@@ -1,10 +1,10 @@
 <?php
 
-namespace Mantix\LivewireKanbanBoard\Tests;
+namespace SheavesCapital\LivewireKanbanBoard\Tests;
 
 use Livewire\Features\SupportTesting\Testable;
 use Livewire\Livewire;
-use Mantix\LivewireKanbanBoard\LivewireKanbanBoard;
+use SheavesCapital\LivewireKanbanBoard\LivewireKanbanBoard;
 
 class LivewireKanbanBoardTest extends TestCase {
     private function createComponent($parameters = []): Testable {
