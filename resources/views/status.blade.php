@@ -1,5 +1,5 @@
 {{-- Injected variables $status, $styles --}}
-<div class="{{ $styles['statusWrapper'] }}" style="width: {{ $styles['statusWidth'] }}px;">
+<div class="{{ $styles['statusWrapper'] }}">
     <div class="{{ $styles['status'] }}" id="{{ $status['id'] }}">
 
         @include($statusHeaderView, [
@@ -9,7 +9,7 @@
         <div id="{{ $status['swimlaneStatusID'] }}"
             data-status-group="{{ $status['group'] }}"
             data-status-id="{{ $status['id'] }}"
-            class="status-container {{ $styles['statusRecords'] }}">
+            class="status-container {{ $styles['statusRecords'] }}" data-scroll="minimal-dark">
 
             @foreach ($status['records'] as $record)
                 @include($recordView, [
