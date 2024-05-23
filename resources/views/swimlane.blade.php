@@ -7,8 +7,8 @@
         ])
 
         <div id="swimlane-{{ $swimlane['id'] }}"
-             data-swimlane-id="{{ $swimlane['id'] }}"
-             class="swimlane-container {{ $styles['swimlaneRecords'] }}">
+            data-swimlane-id="{{ $swimlane['id'] }}"
+            class="swimlane-container {{ $styles['swimlaneRecords'] }}">
 
             @foreach ($swimlane['statuses'] as $status)
                 @include($statusView, [
