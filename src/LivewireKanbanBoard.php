@@ -104,8 +104,8 @@ class LivewireKanbanBoard extends Component {
         return collect();
     }
 
-    public function isRecordInStatusAndSwimlane($record, $status, $swimlane) {
-        return $record['status'] == $status['id'] && $record['swimlane'] == $swimlane['id'];
+    public function isRecordInStatusAndSwimlane($record, $status) {
+        return $record['status'] == $status['id'];
     }
 
     public function onStatusSorted($recordId, $statusId, $orderedIds) {
@@ -140,29 +140,24 @@ class LivewireKanbanBoard extends Component {
     }
 
     public function render() {
-        $swimlanes = $this->swimlanes();
+        // $swimlanes = $this->swimlanes();
         $statuses = $this->statuses();
         $records = $this->records();
         $styles = $this->styles();
 
-        $swimlanes = $swimlanes->map(function ($swimlane) use ($statuses, $records) {
+        $statuses = $statuses->map(function ($status) use ($records) {
             $id = $this->id ?? 'kanban';
-            $swimlane['group'] = $id;
-            $swimlane['statuses'] = $statuses->map(function ($status) use ($id, $swimlane, $records) {
-                $status['group'] = $id;
-                $status['swimlaneStatusID'] = $id . '-' . $swimlane['id'] . '-' . $status['id'];
-                $status['records'] = $records->filter(function ($record) use ($id, $swimlane, $status) {
-                    $record['swimlaneStatusRecordID'] = $id . '-' . $swimlane['id'] . '-' . $status['id'] . '-' . $record['id'];
-                    return $this->isRecordInStatusAndSwimlane($record, $status, $swimlane);
-                });
-                return $status;
+            $status['group'] = $id;
+            $status['swimlaneStatusID'] = $id . '-' . $status['id'];
+            $status['records'] = $records->filter(function ($record) use ($id, $status) {
+                $record['swimlaneStatusRecordID'] = $id . '-' . $status['id'] . '-' . $record['id'];
+                return $this->isRecordInStatusAndSwimlane($record, $status);
             });
-            return $swimlane;
+            return $status;
         });
 
         return view($this->kanbanBoardView)
             ->with([
-                'swimlanes' => $swimlanes,
                 'statuses' => $statuses,
                 'records' => $records,
                 'styles' => $styles,

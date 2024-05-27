@@ -4,9 +4,9 @@
     </div>
 
     <div class="{{ $styles['kanbanWrapper'] }}">
-        @foreach ($swimlanes as $swimlane)
-            @include($swimlaneView, [
-                'swimlane' => $swimlane,
+        @foreach ($statuses as $status)
+            @include($statusView, [
+                'status' => $status,
             ])
         @endforeach
     </div>
